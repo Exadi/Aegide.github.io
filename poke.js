@@ -477,8 +477,9 @@ function fuseBothPoke(){
     document.getElementById("fusionid2").innerHTML = " (" + num2 + "." + num1 + ")";
     
     //Name of fusions
-    document.getElementById("FP1").innerHTML = fmon1+ "/" + fmon2;
-    document.getElementById("FP2").innerHTML = fmon2 + "/" + fmon1;
+    var fusedNames = getFusedNames(num1, num2);
+    document.getElementById("FP1").innerHTML = fmon1+ "/" + fmon2 + "<br/>" + fusedNames[0];
+    document.getElementById("FP2").innerHTML = fmon2 + "/" + fmon1 + "<br/>" + fusedNames[1];
 
     //Name of pictures
     var pic1 = num1 + "." + num2 + ".png";
